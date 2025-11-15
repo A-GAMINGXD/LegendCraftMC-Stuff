@@ -1,0 +1,2 @@
+# LegendCraftMC-Stuff
+LGMC
