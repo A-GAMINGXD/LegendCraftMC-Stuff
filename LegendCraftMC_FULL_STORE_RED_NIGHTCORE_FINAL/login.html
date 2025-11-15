@@ -1,0 +1,19 @@
+<!DOCTYPE html><html><head><link rel='stylesheet' href='style.css'>
+<script>
+if(localStorage.getItem('user')) location='index.html';
+function go(){
+ let u=document.getElementById('u').value;
+ let p=document.getElementById('p').value;
+ if(!u||!p){alert('Missing fields');return;}
+ localStorage.setItem('user',u);
+ localStorage.setItem('platform',p);
+ location='index.html';
+}
+</script></head>
+<body style='background:linear-gradient(135deg,#330000,#660000);display:flex;justify-content:center;align-items:center;height:100vh;'>
+<div class='card' style='width:400px;text-align:center;'>
+<h1>Welcome to LegendCraftMC</h1>
+<input id='u' placeholder='Minecraft Username'><br><br>
+<select id='p'><option value=''>Platform</option><option>Java</option><option>Bedrock</option></select><br><br>
+<button onclick='go()'>Continue</button>
+</div></body></html>
